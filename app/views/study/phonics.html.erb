@@ -1,28 +1,17 @@
 <h1>Phonics</h1>
-<p>ようこそ</p>
+<p><%= audio_tag(@phonic.question,id:"audio") %></p>
+<p><%= button_tag "click here for speak." ,class:"btn btn-info audioButton"%></p>
+<%=javascript_tag do%>
+        document.querySelector('.audioButton').onclick = function () {
+        document.querySelector("#audio").play();
+        }
+<%end%>
+<p><%= audio_tag(@phonic.cand1,id:"cand1") %></p>
+<p><%= button_tag "click here for speak." ,class:"btn btn-info audioButtonCand1"%></p>
+<%=javascript_tag do%>
+        document.querySelector('.audioButtonCand1').onclick = function () {
+        document.querySelector("#cand1").play();
+        }
+<%end%>
 
-<table>
-  <thead>
-    <tr>
-      <th>User name</th>
-      <th>Study date</th>
-      <th>Section</th>
-      <th>Score</th>
-      <th>Num questions</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @histories.each do |history| %>
-      <tr>
-        <td><%= history.user_name %></td>
-        <td><%= history.study_date %></td>
-        <td><%= history.section %></td>
-        <td><%= history.score %></td>
-        <td><%= history.num_questions %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<%= button_to "Let's start", study_phonics_path, params: { page: :start, num: 1 } %>
+<%= button_to "Next", study_phonics_path, params: { page: :start, num: 2 } %>
