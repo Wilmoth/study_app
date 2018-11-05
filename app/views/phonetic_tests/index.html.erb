@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Phonetic Tests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Cand1</th>
+      <th>Cand2</th>
+      <th>Cand3</th>
+      <th>Answer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @phonetic_tests.each do |phonetic_test| %>
+      <tr>
+        <td><%= phonetic_test.question %></td>
+        <td><%= phonetic_test.cand1 %></td>
+        <td><%= phonetic_test.cand2 %></td>
+        <td><%= phonetic_test.cand3 %></td>
+        <td><%= phonetic_test.answer %></td>
+        <td><%= link_to 'Show', phonetic_test %></td>
+        <td><%= link_to 'Edit', edit_phonetic_test_path(phonetic_test) %></td>
+        <td><%= link_to 'Destroy', phonetic_test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Phonetic Test', new_phonetic_test_path %>

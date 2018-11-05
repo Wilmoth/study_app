@@ -1,0 +1,42 @@
+<%= form_with(model: history, local: true) do |form| %>
+  <% if history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(history.errors.count, "error") %> prohibited this history from being saved:</h2>
+
+      <ul>
+      <% history.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_name %>
+    <%= form.text_field :user_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :study_date %>
+    <%= form.datetime_select :study_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :section %>
+    <%= form.number_field :section %>
+  </div>
+
+  <div class="field">
+    <%= form.label :score %>
+    <%= form.number_field :score %>
+  </div>
+
+  <div class="field">
+    <%= form.label :num_questions %>
+    <%= form.number_field :num_questions %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class PhoneticTest < ApplicationRecord
+end

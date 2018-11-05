@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @phonetic_test.question %>
+</p>
+
+<p>
+  <strong>Cand1:</strong>
+  <%= @phonetic_test.cand1 %>
+</p>
+
+<p>
+  <strong>Cand2:</strong>
+  <%= @phonetic_test.cand2 %>
+</p>
+
+<p>
+  <strong>Cand3:</strong>
+  <%= @phonetic_test.cand3 %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @phonetic_test.answer %>
+</p>
+
+<%= link_to 'Edit', edit_phonetic_test_path(@phonetic_test) %> |
+<%= link_to 'Back', phonetic_tests_path %>

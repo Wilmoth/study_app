@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User name:</strong>
+  <%= @history.user_name %>
+</p>
+
+<p>
+  <strong>Study date:</strong>
+  <%= @history.study_date %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @history.section %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @history.score %>
+</p>
+
+<p>
+  <strong>Num questions:</strong>
+  <%= @history.num_questions %>
+</p>
+
+<%= link_to 'Edit', edit_history_path(@history) %> |
+<%= link_to 'Back', histories_path %>
