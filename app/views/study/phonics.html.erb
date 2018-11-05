@@ -1,16 +1,32 @@
 <h1>Phonics</h1>
 <p><%= audio_tag(@phonic.question,id:"audio") %></p>
-<p><%= button_tag "click here for speak." ,class:"btn btn-info audioButton"%></p>
+<p><%= button_tag "Question" ,class:"btn btn-info audioButton"%></p>
 <%=javascript_tag do%>
         document.querySelector('.audioButton').onclick = function () {
         document.querySelector("#audio").play();
         }
 <%end%>
 <p><%= audio_tag(@phonic.cand1,id:"cand1") %></p>
-<p><%= button_tag "click here for speak." ,class:"btn btn-info audioButtonCand1"%></p>
+<p><%= button_tag "Answer 1" ,class:"btn btn-info audioButtonCand1"%></p>
 <%=javascript_tag do%>
         document.querySelector('.audioButtonCand1').onclick = function () {
         document.querySelector("#cand1").play();
+        }
+<%end%>
+
+<p><%= audio_tag(@phonic.cand2,id:"cand2") %></p>
+<p><%= button_tag "Answer 2" ,class:"btn btn-info audioButtonCand2"%></p>
+<%=javascript_tag do%>
+        document.querySelector('.audioButtonCand2').onclick = function () {
+        document.querySelector("#cand2").play();
+        }
+<%end%>
+
+<p><%= audio_tag(@phonic.cand3,id:"cand3") %></p>
+<p><%= button_tag "Answer 3" ,class:"btn btn-info audioButtonCand3"%></p>
+<%=javascript_tag do%>
+        document.querySelector('.audioButtonCand3').onclick = function () {
+        document.querySelector("#cand3").play();
         }
 <%end%>
 
