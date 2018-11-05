@@ -1,2 +1,28 @@
 <h1>Phonics</h1>
 <p>ようこそ</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>User name</th>
+      <th>Study date</th>
+      <th>Section</th>
+      <th>Score</th>
+      <th>Num questions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @histories.each do |history| %>
+      <tr>
+        <td><%= history.user_name %></td>
+        <td><%= history.study_date %></td>
+        <td><%= history.section %></td>
+        <td><%= history.score %></td>
+        <td><%= history.num_questions %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= button_to "Let's start", study_phonics_path, params: { page: :start, num: 1 } %>
