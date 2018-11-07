@@ -16,3 +16,12 @@
  
 @import "font-awesome-sprockets"; 
 @import "font-awesome"; 
+
+@font-face{
+  font-family: "vl";
+  src: font-url("VL-PGothic-Regular.ttf");
+}
+
+body{
+  font-family: "vl";
+}
