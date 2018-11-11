@@ -7,7 +7,7 @@
         }
 <%end%>
 <p><%= audio_tag(@phonic.cand1,id:"cand1") %></p>
-<p><%= button_tag "Answer 1" ,class:"btn btn-info audioButtonCand1"%></p>
+<p><%=f.radio_button <%= button_tag "Answer 1" ,class:"btn btn-info audioButtonCand1"%></p>
 <%=javascript_tag do%>
         document.querySelector('.audioButtonCand1').onclick = function () {
         document.querySelector("#cand1").play();
