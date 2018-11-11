@@ -12,7 +12,7 @@
   <body>
   <header> 
       <nav>
-        <%= link_to 'Phonics', phonetic_tests_path %> <% if user_signed_in? %>
+        <%= link_to 'Home', home_index_path %> <% if user_signed_in? %>
         <%= link_to 'プロフィール変更', edit_user_registration_path %>
         <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
           <% else %>

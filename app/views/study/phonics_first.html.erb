@@ -1,11 +1,14 @@
+<div style="text-align:center;">
+    <div class="container-p">
+
 <h1>Phonics</h1>
-<p>ようこそ</p>
+<p>これまでのスコア</p>
 
 <table class="table table-bordered">
   <thead>
     <tr>
       <th scope="col">User name</th>
-      <th scope="col">Study date</th>
+      <th scope="col">Last Score</th>
       <th scope="col">Section</th>
       <th scope="col">Score</th>
       <th>Num questions</th>
@@ -25,4 +28,10 @@
   </tbody>
 </table>
 
+<br>
+
+
 <%= button_to "Let's start", study_phonics_path, params: { page: :start, num: 1 } %>
+
+    </div>
+</div>
