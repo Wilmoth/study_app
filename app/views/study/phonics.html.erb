@@ -33,7 +33,7 @@
         }
 <%end%>
 
-<%= button_to "Next", study_phonics_path, params: { page: :start, num: 2 } %>
+<%= button_to "Next", study_phonics_path, method: :get, params: { page: :start, num: @num } %>
 
     </div>
 </div>
