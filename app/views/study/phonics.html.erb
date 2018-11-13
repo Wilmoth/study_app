@@ -1,39 +1,47 @@
 <div style="text-align:center;">
     <div class="container-p">
 
-<h1>Phonics</h1>
-<p><%= audio_tag(@phonic.question,id:"audio") %></p>
-<p><%= button_tag "Question" ,class:"btn btn-info audioButton"%></p>
-<%=javascript_tag do%>
-        document.querySelector('.audioButton').onclick = function () {
-        document.querySelector("#audio").play();
-        }
-<%end%>
-<p><%= audio_tag(@phonic.cand1,id:"cand1") %></p>
-<p><%= button_tag "Answer 1" ,class:"btn btn-info audioButtonCand1"%></p>
-<%=javascript_tag do%>
-        document.querySelector('.audioButtonCand1').onclick = function () {
-        document.querySelector("#cand1").play();
-        }
-<%end%>
+<h1>Phonics <%= @num %> </h1>
+<%= form_tag study_phonics_path do |f| %>
+        <p><%= audio_tag(@phonic.question,id:"audio") %></p>
+        <p><%= button_tag "Question" ,class:"btn btn-info audioButton", type: 'button' %></p>
+        <%=javascript_tag do%>
+                document.querySelector('.audioButton').onclick = function () {
+                document.querySelector("#audio").play();
+                }
+        <%end%>
+        <%= radio_button_tag :answer, :first %>
+        <p><%= audio_tag(@phonic.cand1,id:"cand1") %></p>
+        <p><%= button_tag "Answer 1" ,class:"btn btn-info audioButtonCand1", type: 'button' %></p>
+        <%=javascript_tag do%>
+                document.querySelector('.audioButtonCand1').onclick = function () {
+                document.querySelector("#cand1").play();
+                }
+        <%end%>
+        <%= radio_button_tag :answer, :second %>
+        <p><%= audio_tag(@phonic.cand2,id:"cand2") %></p>
+        <p><%= button_tag "Answer 2" ,class:"btn btn-info audioButtonCand2", type: 'button' %></p>
+        <%=javascript_tag do%>
+                document.querySelector('.audioButtonCand2').onclick = function () {
+                document.querySelector("#cand2").play();
+                }
+        <%end%>
+        <%= radio_button_tag :answer, :third %>
+        <p><%= audio_tag(@phonic.cand3,id:"cand3") %></p>
+        <p><%= button_tag "Answer 3" ,class:"btn btn-info audioButtonCand3", type: 'button' %></p>
+        <%=javascript_tag do%>
+                document.querySelector('.audioButtonCand3').onclick = function () {
+                document.querySelector("#cand3").play();
+                }
+        <%end%>
+        <%= @message %>
+            <%= hidden_field_tag :page,:next %>
+            <%= hidden_field_tag :num,@num %>
+            <%= hidden_field_tag :correct,@phonic.answer %>
+        <%= submit_tag "Next", :class => "btn btn-primary btn-lg btn-block" %>
+        
 
-<p><%= audio_tag(@phonic.cand2,id:"cand2") %></p>
-<p><%= button_tag "Answer 2" ,class:"btn btn-info audioButtonCand2"%></p>
-<%=javascript_tag do%>
-        document.querySelector('.audioButtonCand2').onclick = function () {
-        document.querySelector("#cand2").play();
-        }
-<%end%>
-
-<p><%= audio_tag(@phonic.cand3,id:"cand3") %></p>
-<p><%= button_tag "Answer 3" ,class:"btn btn-info audioButtonCand3"%></p>
-<%=javascript_tag do%>
-        document.querySelector('.audioButtonCand3').onclick = function () {
-        document.querySelector("#cand3").play();
-        }
-<%end%>
-
-<%= button_to "Next", study_phonics_path, method: :get, params: { page: :start, num: @num } %>
+<% end %>
 
     </div>
 </div>
