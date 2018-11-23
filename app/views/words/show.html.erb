@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @word.level %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @word.question %>
+</p>
+
+<p>
+  <strong>Cand1:</strong>
+  <%= @word.cand1 %>
+</p>
+
+<p>
+  <strong>Cand2:</strong>
+  <%= @word.cand2 %>
+</p>
+
+<p>
+  <strong>Cand3:</strong>
+  <%= @word.cand3 %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @word.answer %>
+</p>
+
+<%= link_to 'Edit', edit_word_path(@word) %> |
+<%= link_to 'Back', words_path %>

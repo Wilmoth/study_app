@@ -1,0 +1,2 @@
+class Listening < ApplicationRecord
+end

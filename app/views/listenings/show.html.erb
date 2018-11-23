@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @listening.level %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @listening.question %>
+</p>
+
+<p>
+  <strong>Cand1:</strong>
+  <%= @listening.cand1 %>
+</p>
+
+<p>
+  <strong>Cand2:</strong>
+  <%= @listening.cand2 %>
+</p>
+
+<p>
+  <strong>Cand3:</strong>
+  <%= @listening.cand3 %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @listening.answer %>
+</p>
+
+<%= link_to 'Edit', edit_listening_path(@listening) %> |
+<%= link_to 'Back', listenings_path %>

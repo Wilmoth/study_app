@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listenings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Question</th>
+      <th>Cand1</th>
+      <th>Cand2</th>
+      <th>Cand3</th>
+      <th>Answer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @listenings.each do |listening| %>
+      <tr>
+        <td><%= listening.level %></td>
+        <td><%= listening.question %></td>
+        <td><%= listening.cand1 %></td>
+        <td><%= listening.cand2 %></td>
+        <td><%= listening.cand3 %></td>
+        <td><%= listening.answer %></td>
+        <td><%= link_to 'Show', listening %></td>
+        <td><%= link_to 'Edit', edit_listening_path(listening) %></td>
+        <td><%= link_to 'Destroy', listening, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Listening', new_listening_path %>

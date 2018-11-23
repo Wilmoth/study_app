@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :listenings
+  resources :words
   devise_for :users
   root to: "home#index"
   get 'home/index'
