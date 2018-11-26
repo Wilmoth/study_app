@@ -2,11 +2,10 @@ class StudyController < ApplicationController
     # ユーザがログインしていないとできない
     before_action :authenticate_user!, only: [:phonics, :words, :listening, :game]
     def phonics
-        if session[:answer]
-            logger.debug "回答セッション内容:" + session[:answer]
+        if params.key?(:correct)
+            logger.debug "params==> correct:" + params[:correct]
         end
         if params.key?(:page)
-            
             logger.debug "params==> page:" + params[:page]
             logger.debug "params==> num:" + params[:num]
         end
@@ -43,6 +42,7 @@ class StudyController < ApplicationController
         else
             # セッションリセット
             session[:answer] = ''
+            session[:rand] = ''
             @histories = History.where(user_name: current_user.email).order("created_at desc").limit(5)
             # 最初（履歴）の画面
             
@@ -54,25 +54,39 @@ class StudyController < ApplicationController
     private
     
     def phonics_question(num)
-        @phonic = PhoneticTest.offset(num).first
+        # 問題を取り出す
+        rnd = get_question_num(PhoneticTest.count)
+        @phonic = PhoneticTest.offset(rnd - 1).first
     end
     
+    def get_question_num(max)
+        # １から、受け取る数までの乱数を返す
+        c = Random.rand(1 .. max)
+        session[:rand] << c.to_s + ","
+        if session[:rand]
+            logger.debug "randセッション内容:" + session[:rand]
+        end
+        c
+    end
     
     def incl_num
         # 問題の番号を変数に代入
         num = params[:num].to_i
         # 答えがあるかどうかを確認する
         if params.key?(:answer)
-            @num = num + 1 #答えがあればインクリメント
-            @message = ""
             # 答えが正解の時その番号をセッションに追記保存
             if params[:correct] == "1" && params[:answer] == "first" \
             || params[:correct] == "2" && params[:answer] == "second" \
             || params[:correct] == "3" && params[:answer] == "third" 
-                session[:answer] << @num.to_s + ','
+                session[:answer] << num.to_s + ','
             else
                 session[:answer] << '99,'
             end
+            if session[:answer]
+                logger.debug "回答セッション内容:" + session[:answer]
+            end
+            @num = num + 1 #答えがあればインクリメント
+            @message = ""
         else
             @num = num
             @message = "こたえ　を　えらんでね"
@@ -89,5 +103,6 @@ class StudyController < ApplicationController
         logger.debug "count:" + count.to_s + " incorrect:" + incorrect.to_s
         ((count - incorrect).to_f / count.to_f * 100).to_i 
     end
+    
 
 end
