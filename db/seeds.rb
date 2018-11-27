@@ -5,21 +5,96 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-PhoneticTest.create(question:'q_short_a.mp3',cand1:'ans_octopus.mp3',cand2:'ans_ant.mp3',cand3:'ans_umbrella.mp3',answer:2)
-PhoneticTest.create(question:'q_short_b.mp3',cand1:'ans_beach.mp3',cand2:'ans_duck.mp3',cand3:'ns_elephant.mp3',answer:1)
+PhoneticTest.create(question:'short_a.mp3',cand1:'octopus.mp3',cand2:'ant.mp3',cand3:'umbrella.mp3',answer:2)
+PhoneticTest.create(question:'short_b.mp3',cand1:'beach.mp3',cand2:'duck.mp3',cand3:'elephant.mp3',answer:1)
+PhoneticTest.create(question:'short_c.mp3',cand1:'zebra.mp3',cand2:'garbage.mp3',cand3:'camera.mp3',answer:3)
+PhoneticTest.create(question:'short_d.mp3',cand1:'dog.mp3',cand2:'top.mp3',cand3:'book.mp3',answer:1)
+PhoneticTest.create(question:'short_e.mp3',cand1:'elbow.mp3',cand2:'apple.mp3',cand3:'umpire.mp3',answer:1)
+PhoneticTest.create(question:'short_f.mp3',cand1:'fire.mp3',cand2:'voice.mp3',cand3:'bag.mp3',answer:1)
+PhoneticTest.create(question:'short_g.mp3',cand1:'cook.mp3',cand2:'good.mp3',cand3:'victory.mp3',answer:2)
+PhoneticTest.create(question:'short_h.mp3',cand1:'uncle.mp3',cand2:'food.mp3',cand3:'honey.mp3',answer:3)
+PhoneticTest.create(question:'short_i.mp3',cand1:'igloo.mp3',cand2:'elephant.mp3',cand3:'octopus.mp3',answer:1)
+PhoneticTest.create(question:'short_j.mp3',cand1:'goat.mp3',cand2:'jack_o_lantern.mp3',cand3:'king.mp3',answer:2)
+PhoneticTest.create(question:'short_k.mp3',cand1:'tiger.mp3',cand2:'glove.mp3',cand3:'koala.mp3',answer:3)
+PhoneticTest.create(question:'short_l.mp3',cand1:'lightning.mp3',cand2:'ruler.mp3',cand3:'water.mp3',answer:1)
+PhoneticTest.create(question:'short_m.mp3',cand1:'nose.mp3',cand2:'monkey.mp3',cand3:'violin.mp3',answer:2)
+PhoneticTest.create(question:'short_n.mp3',cand1:'map.mp3',cand2:'snake.mp3',cand3:'notebook.mp3',answer:3)
+PhoneticTest.create(question:'short_o.mp3',cand1:'orange.mp3',cand2:'alligator.mp3',cand3:'elevator.mp3',answer:1)
+PhoneticTest.create(question:'short_p.mp3',cand1:'bird.mp3',cand2:'pumpkin.mp3',cand3:'hamburger.mp3',answer:2)
+PhoneticTest.create(question:'short_q.mp3',cand1:'queen.mp3',cand2:'green.mp3',cand3:'tree.mp3',answer:1)
+PhoneticTest.create(question:'short_r.mp3',cand1:'lion.mp3',cand2:'ring.mp3',cand3:'watch.mp3',answer:2)
+PhoneticTest.create(question:'short_s.mp3',cand1:'zoo.mp3',cand2:'volleyball.mp3',cand3:'snowman.mp3',answer:3)
+PhoneticTest.create(question:'short_t.mp3',cand1:'turkey.mp3',cand2:'dish.mp3',cand3:'pig.mp3',answer:1)
+PhoneticTest.create(question:'short_u.mp3',cand1:'astronaut.mp3',cand2:'up.mp3',cand3:'egg.mp3',answer:2)
+PhoneticTest.create(question:'short_v.mp3',cand1:'vase.mp3 .mp3',cand2:'baby.mp3',cand3:'pen.mp3',answer:1)
+PhoneticTest.create(question:'short_w.mp3',cand1:'window.mp3 .mp3',cand2:'under.mp3',cand3:'animal.mp3',answer:1)
+PhoneticTest.create(question:'short_x.mp3',cand1:'kettle.mp3 .mp3',cand2:'cow.mp3',cand3:'xray.mp3',answer:3)
+PhoneticTest.create(question:'short_y.mp3',cand1:'ax.mp3 .mp3',cand2:'yacht.mp3',cand3:'up.mp3',answer:2)
+PhoneticTest.create(question:'short_z.mp3',cand1:'fork.mp3 .mp3',cand2:'zebra.mp3',cand3:'star.mp3',answer:2)
 
-#|  3 | short_c.mp3   | zebra.mp3       | garbage.mp3        | camera.mp3       |      3 | 2018-11-25 23:43:55 | 2018-11-25 23:43:55 |
-#|  4 | short_d.mp3   | dog.mp3         | top.mp3            | book.mp3         |      1 | 2018-11-25 23:45:36 | 2018-11-25 23:45:36 |
-#|  5 | short_e.mp3   | elbow.mp3       | apple.mp3          | umpire.mp3       |      1 | 2018-11-25 23:46:42 | 2018-11-25 23:46:42 |
-#|  6 | short_f.mp3   | fire.mp3        | voice.mp3          | bag.mp3          |      1 | 2018-11-25 23:47:47 | 2018-11-25 23:47:47 |
-#|  7 | short_g.mp3   | cook.mp3        | good.mp3           | victory.mp3      |      2 | 2018-11-25 23:49:31 | 2018-11-25 23:49:31 |
-#  8 | short_h.mp3   | uncle.mp3       | food.mp3           | honey.mp3        |      3 | 2018-11-25 23:50:48 | 2018-11-25 23:50:48 |
-#|  9 | short_i.mp3   | igloo.mp3       | elephant.mp3       | octopus.mp3      |      1 | 2018-11-25 23:52:15 | 2018-11-25 23:52:15 |
-#| 10 | short_j.mp3   | goat.mp3        | jack_o_lantern.mp3 | king.mp3         |      2 | 2018-11-25 23:53:49 | 2018-11-25 23:53:49 |
-#| 11 | short_k.mp3   | tiger.mp3       | glove.mp3          | koala.mp3        |      3 | 2018-11-25 23:55:18 | 2018-11-25 23:55:18 |
-#| 12 | short_l.mp3   | lightning.mp3   | ruler.mp3          | water.mp3        |      1 | 2018-11-25 23:56:30 | 2018-11-25 23:56:30 |
-#| 13 | short_m.mp3   | nose.mp3        | monkey.mp3         | violin.mp3       |      2 | 2018-11-25 23:57:46 | 2018-11-25 23:57:46 |
-#| 14 | short_n.mp3   | map.mp3         | snake.mp3          | notebook.mp3     |      3 | 2018-11-25 23:58:59 | 2018-11-25 23:58:59 |
-# 15 | short_o.mp3   | orange.mp3      | alligator.mp3      | elevator.mp3     |      1 | 2018-11-26 00:00:17 | 2018-11-26 00:00:17 |
-#| 16 | short_p.mp3   | bird.mp3        | pumpkin.mp3        | hamburger.mp3    |      2 | 2018-11-26 00:01:41 | 2018-11-26 00:01:41 |
-#| 17 | short_q.mp3   | queen.mp3       | green.mp3          | tree.mp3         |      1 | 2018-11-26 00:02:43 | 2018-11-26 00:02:43 
+
+Word.create(level:1, question:'alligator.png',cand1:'elevator',cand2:'calendar',cand3:'alligator',answer:3)
+Word.create(level:1, question:'ant.png',cand1:'ant',cand2:'aunt',cand3:'and',answer:1)
+Word.create(level:1, question:'apple.png',cand1:'april',cand2:'apple',cand3:'upper',answer:2)
+Word.create(level:2, question:'basketball.png',cand1:'basket',cand2:'bus',cand3:'basketball',answer:3)
+Word.create(level:1, question:'bat.png',cand1:'but',cand2:'bend',cand3:'bat',answer:3)
+Word.create(level:1, question:'bear.png',cand1:'bear',cand2:'bird',cand3:'very',answer:1)
+Word.create(level:1, question:'bee.png',cand1:'bear',cand2:'bee',cand3:'fly',answer:2)
+Word.create(level:1, question:'beetle.png',cand1:'beetle',cand2:'bee',cand3:'cockroach',answer:1)
+Word.create(level:2, question:'butterfly.png',cand1:'fly',cand2:'butter',cand3:'butterfly',answer:3)
+Word.create(level:1, question:'cake.png',cand1:'khaki',cand2:'cake',cand3:'kick',answer:2)
+Word.create(level:1, question:'cat.png',cand1:'kettle',cand2:'cap',cand3:'cat',answer:3)
+Word.create(level:2, question:'cherry.png',cand1:'cherry',cand2:'curry',cand3:'cry',answer:1)
+Word.create(level:2, question:'chocolate.png',cand1:'Christmas',cand2:'chocolate',cand3:'circulate',answer:2)
+Word.create(level:2, question:'chopsticks.png',cand1:'characteristic',cand2:'shoes',cand3:'chopsticks',answer:3)
+Word.create(level:2, question:'cicada.png',cand1:'snail',cand2:'grasshopper',cand3:'cicada',answer:3)
+Word.create(level:1, question:'cookie.png',cand1:'cookie',cand2:'cake',cand3:'bread',answer:1)
+Word.create(level:1, question:'cow.png',cand1:'horse',cand2:'cow',cand3:'hippopotamus',answer:2)
+Word.create(level:1, question:'cupcake.png',cand1:'cupcake',cand2:'sponge',cand3:'cherry',answer:1)
+Word.create(level:2, question:'curling.png',cand1:'curling',cand2:'skating',cand3:'ice hockey',answer:1)
+Word.create(level:2, question:'dolphin.png',cand1:'fish',cand2:'whale',cand3:'dolphin',answer:3)
+Word.create(level:2, question:'fishing.png',cand1:'hiking',cand2:'fishing',cand3:'cooking',answer:2)
+Word.create(level:1, question:'frog.png',cand1:'frog',cand2:'snake',cand3:'lizard',answer:1)
+Word.create(level:1, question:'goat.png',cand1:'sheep',cand2:'goat',cand3:'horse',answer:2)
+Word.create(level:1, question:'grape.png',cand1:'grape',cand2:'banana',cand3:'orange',answer:1)
+Word.create(level:2, question:'hen.png',cand1:'hen',cand2:'pigeon',cand3:'creature',answer:1)
+Word.create(level:2, question:'hippo.png',cand1:'godzilla',cand2:'hippopotamus',cand3:'gorilla',answer:2)
+Word.create(level:1, question:'horse.png',cand1:'zibra',cand2:'bird',cand3:'ice horse',answer:3)
+Word.create(level:2, question:'killer_whale.png',cand1:'dolphin',cand2:'killer whale',cand3:'ray',answer:2)
+Word.create(level:1, question:'kiwi.png',cand1:'grapefruit',cand2:'strawberry',cand3:'kiwi',answer:3)
+Word.create(level:1, question:'koala.png',cand1:'koala',cand2:'cobra',cand3:'bear',answer:1)
+Word.create(level:2, question:'ladybug.png',cand1:'ladybug',cand2:'beetle',cand3:'cricket',answer:1)
+Word.create(level:1, question:'lemon.png',cand1:'orange',cand2:'grapefruit',cand3:'lemon',answer:3)
+Word.create(level:2, question:'mosquito.png',cand1:'mosquito',cand2:'fly',cand3:'ladybug',answer:1)
+Word.create(level:1, question:'penguin.png',cand1:'fish',cand2:'penguin',cand3:'dolphin',answer:2)
+Word.create(level:2, question:'praying_mantis.png',cand1:'grasshopper',cand2:'praying_mantis',cand3:'cricket',answer:2)
+
+Listening.create(level:1, question:'king.mp3',cand1:'king.png',cand2:'queen.png',cand3:'snake.png',answer:1)
+Listening.create(level:1, question:'window.mp3',cand1:'windy.png',cand2:'window.png',cand3:'whale.png',answer:2)
+Listening.create(level:1, question:'octopus.mp3',cand1:'squid.png',cand2:'sea_turtle.png',cand3:'octopus.png',answer:3)
+Listening.create(level:1, question:'violin.mp3',cand1:'trumpet.png',cand2:'guitar.png',cand3:'violin.png',answer:3)
+Listening.create(level:1, question:'ruler.mp3',cand1:'ruler.png',cand2:'eraser.png',cand3:'scissors.png',answer:1)
+Listening.create(level:1, question:'volleyball.mp3',cand1:'basketball.png',cand2:'volleyball.png',cand3:'baseball.png',answer:2
+Listening.create(level:1, question:'tree.mp3',cand1:'tree.png',cand2:'three.png',cand3:'fishing.png',answer:1)
+Listening.create(level:1, question:'fire.mp3',cand1:'yakiimo.png',cand2:'fire.png',cand3:'fork.png',answer:2)
+Listening.create(level:1, question:'beach.mp3',cand1:'beach.png',cand2:'beetle.png',cand3:'sandal.png',answer:1)
+Listening.create(level:1, question:'duck.mp3',cand1:'donut.png',cand2:'donkey.png',cand3:'duck.png',answer:3)
+Listening.create(level:2, question:'dragonfly.mp3',cand1:'dragon',cand2:'tool free',cand3:'dragonfly',answer:3)
+Listening.create(level:2, question:'cicada.mp3',cand1:'cicada',cand2:'cider',cand3:'candy',answer:1)
+Listening.create(level:2, question:'tennis.mp3',cand1:'ticket',cand2:'table',cand3:'tennis',answer:3)
+Listening.create(level:2, question:'snowboarding.mp3',cand1:'snowboarding.png',cand2:'skating',cand3:'skiing',answer:1)
+Listening.create(level:2, question:'umpire.mp3',cand1:'vampire',cand2:'umpire',cand3:'inspire',answer:2)
+Listening.create(level:2, question:'vase.mp3',cand1:'vase',cand2:'face',cand3:'base',answer:1)
+Listening.create(level:2, question:'watch.mp3',cand1:'witch',cand2:'watch',cand3:'itchy',answer:2)
+Listening.create(level:2, question:'pen.mp3',cand1:'ten',cand2:'Ben',cand3:'pen',answer:3)
+Listening.create(level:2, question:'onion.mp3',cand1:'orion',cand2:'onion',cand3:'animal',answer:2)
+Listening.create(level:2, question:'food.mp3',cand1:'hood',cand2:'food',cand3:'foot',answer:2)
+
+
+
+
+
+
+
+
+
