@@ -88,7 +88,7 @@ PhoneticTest.create(question:'short_u.mp3',cand1:'astronaut.mp3',cand2:'up.mp3',
 PhoneticTest.create(question:'short_v.mp3',cand1:'vase.mp3 .mp3',cand2:'baby.mp3',cand3:'pen.mp3',answer:1)
 PhoneticTest.create(question:'short_w.mp3',cand1:'window.mp3 .mp3',cand2:'under.mp3',cand3:'animal.mp3',answer:1)
 PhoneticTest.create(question:'short_x.mp3',cand1:'kettle.mp3 .mp3',cand2:'cow.mp3',cand3:'xray.mp3',answer:3)
-PhoneticTest.create(question:'short_y.mp3',cand1:'ax.mp3 .mp3',cand2:'yacht.mp3',cand3:'up.mp3',answer:2)
+PhoneticTest.create(question:'short_y.mp3',cand1:'ax.mp3 .mp3',cand2:'yatch.mp3',cand3:'up.mp3',answer:2)
 PhoneticTest.create(question:'short_z.mp3',cand1:'fork.mp3 .mp3',cand2:'zebra.mp3',cand3:'star.mp3',answer:2)
 
 
