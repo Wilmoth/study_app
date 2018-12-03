@@ -3,42 +3,26 @@
 
 <h1>Words <%= @num %> </h1>
 <%= form_tag study_words_path do |f| %>
-        <p><%= image_tag(@word.question,id:"image") %></p>
+        <p><%= image_tag(@word.question,id:"question_image") %></p>
         
         <p> Question! What is this? </p>
-        <%=javascript_tag do%>
-                document.querySelector('.audioButton').onclick = function () {
-                document.querySelector("#audio").play();
-                }
-        <%end%>
-        <%= radio_button_tag :answer, :first %>
-        <p><%= audio_tag(@phonic.cand1,id:"cand1") %></p>
-        <p><%= button_tag "Answer 1" ,class:"btn btn-info audioButtonCand1", type: 'button' %></p>
-        <%=javascript_tag do%>
-                document.querySelector('.audioButtonCand1').onclick = function () {
-                document.querySelector("#cand1").play();
-                }
-        <%end%>
-        <%= radio_button_tag :answer, :second %>
-        <p><%= audio_tag(@phonic.cand2,id:"cand2") %></p>
-        <p><%= button_tag "Answer 2" ,class:"btn btn-info audioButtonCand2", type: 'button' %></p>
-        <%=javascript_tag do%>
-                document.querySelector('.audioButtonCand2').onclick = function () {
-                document.querySelector("#cand2").play();
-                }
-        <%end%>
-        <%= radio_button_tag :answer, :third %>
-        <p><%= audio_tag(@phonic.cand3,id:"cand3") %></p>
-        <p><%= button_tag "Answer 3" ,class:"btn btn-info audioButtonCand3", type: 'button' %></p>
-        <%=javascript_tag do%>
-                document.querySelector('.audioButtonCand3').onclick = function () {
-                document.querySelector("#cand3").play();
-                }
-        <%end%>
+        <div class="row">
+                <div class="col-sm-6" style="text-align: right;"><%= radio_button_tag :answer, :first %></div>
+                <div class="col-sm-2" style="text-align: left;"><p><%= @word.cand1 %></p></div>
+        </div>
+        <div class="row">
+                <div class="col-sm-6" style="text-align: right;"><%= radio_button_tag :answer, :second %></div>
+                <div class="col-sm-2" style="text-align: left;"><p><%= @word.cand2 %></p></div>
+        </div>
+        
+        <div class="row">
+                <div class="col-sm-6" style="text-align: right;"><%= radio_button_tag :answer, :third %></div>
+                <div class="col-sm-2" style="text-align: left;"><p><%= @word.cand3 %></p></div>
+        </div>
         <%= @message %>
             <%= hidden_field_tag :page,:next %>
             <%= hidden_field_tag :num,@num %>
-            <%= hidden_field_tag :correct,@phonic.answer %>
+            <%= hidden_field_tag :correct,@word.answer %>
         <%= submit_tag "Next", :class => "btn btn-primary btn-lg btn-block" %>
         
 

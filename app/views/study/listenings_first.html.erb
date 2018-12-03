@@ -1,0 +1,31 @@
+<div style="text-align:center;">
+    <div class="container-p">
+
+<h1>Listenings</h1>
+<p>これまでのスコア</p>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Date you studied</th>
+      <th scope="col">Score</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @histories.each do |history| %>
+      <tr>
+        <td><%= history.study_date %></td>
+        <td><%= history.score %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= button_to "Let's start", study_listenings_path, method: :get, params: { page: :start, num: 1 } %>
+
+    </div>
+</div>

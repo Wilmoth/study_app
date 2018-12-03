@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   #post 'study/words'
   post 'study/words', to: 'study#words'
   get 'study/words', to: 'study#words'
+
+  post 'study/listenings', to: 'study#listenings'
+  get 'study/listenings', to: 'study#listenings'
   resources :histories
   resources :phonetic_tests
   resources :listenings

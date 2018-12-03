@@ -1,0 +1,41 @@
+<div style="text-align:center;">
+    <div class="container-p">
+
+<h1>Listenings <%= @num %> </h1>
+<%= form_tag study_listenings_path do |f| %>
+        <p><%= audio_tag(@listening.question,id:"audio") %></p>
+        <p><%= button_tag "Question" ,class:"btn btn-info audioButton", type: 'button' %></p>
+        <%=javascript_tag do%>
+                document.querySelector('.audioButton').onclick = function () {
+                document.querySelector("#audio").play();
+                }
+        <%end%>
+        
+        <div class="row">
+                <div class="col-sm-6" style="text-align: right;"><%= radio_button_tag :answer, :first %></div>
+                <div class="col-sm-2" style="text-align: left;"><p><%= image_tag(@listening.cand1,id:"question_image") %></p></div>
+        </div>
+        
+        <div class="row">
+                <div class="col-sm-6" style="text-align: right;"><%= radio_button_tag :answer, :second %></div>
+                <div class="col-sm-2" style="text-align: left;"><p><%= image_tag(@listening.cand2,id:"question_image") %></p></div>
+        </div>
+        
+        <div class="row">
+                <div class="col-sm-6" style="text-align: right;"><%= radio_button_tag :answer, :third %></div>
+                <div class="col-sm-2" style="text-align: left;"><p><%= image_tag(@listening.cand3,id:"question_image") %></p></div>
+        </div>
+        
+    
+        
+        <%= @message %>
+            <%= hidden_field_tag :page,:next %>
+            <%= hidden_field_tag :num,@num %>
+            <%= hidden_field_tag :correct,@listening.answer %>
+        <%= submit_tag "Next", :class => "btn btn-primary btn-lg btn-block" %>
+        
+
+<% end %>
+
+    </div>
+</div>
